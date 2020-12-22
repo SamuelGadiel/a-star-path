@@ -1,0 +1,59 @@
+<!--
+Atividade 3 da Matéria PLIA
+Aluno: Samuel Gadiel de Ávila
+Matricula: 11721EAU005
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>A* com p5.js</title>
+  <script src="libraries/p5.js"></script>
+  <script src="libraries/p5.dom.js"></script>
+
+  <script src="sketch.js"></script>
+  <script src="square.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+</head>
+
+<body>
+
+  <h1>Algorítmo A* com p5.js</h1>
+
+  <div id="main">
+    <div class="container">
+      <div id="canvasContainer"></div>
+
+      <div class="dataContainer">
+
+        <div class="result success">
+          <p id="successResultP">&nbsp;</p>
+        </div>
+
+        <div class="result failure">
+          <p id="failureResultP"></p>
+        </div>
+
+        <div id="tools">
+
+          <button class="startBtn" onClick="startPathfinding();">Iniciar</button>
+          <button class="clearBtn" onClick="clearPathfinding();">Limpar</button>
+          <button class="newWallsBtn" onClick="newWalls();">Novo Jogo</button>
+
+          <div class="diagonals">
+            <input id="allowDiagonals" type="checkbox" onchange="setDiagonals();"></input>
+            Diagonais
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
